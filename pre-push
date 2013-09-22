@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Run test
+make test;
+
+# Get the result of last command
+result=$?
+
+# Check the result
+if [ $result == '0' ]
+then
+  echo "Test Okay!! Push now...";
+  exit 0;
+else
+  echo "Test Failed, please check your code";
+  exit 1;
+fi
